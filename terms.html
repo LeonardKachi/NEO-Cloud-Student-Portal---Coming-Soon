@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO Cloud - Terms of Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Same CSS as privacy.html - maintain consistent styling */
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --glow: 0 0 20px rgba(37, 99, 235, 0.6);
+        }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --glow: 0 0 20px rgba(37, 99, 235, 0.6);
+        }
+        
+        @font-face {
+            font-family: 'Orbitron';
+            src: url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--light);
+            background-color: var(--dark);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: 
+                linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%),
+                url('../images/tech-bg.jpg') center/cover no-repeat fixed;
+            background-blend-mode: overlay;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            width: min(100%, 300px);
+            height: 80px;
+            margin: 0 auto;
+        }
+        
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(var(--glow));
+        }
+
+        /* Main Content */
+        .legal-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .legal-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-light);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem;
+            color: var(--light);
+        }
+
+        p, li {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+            text-align: right;
+        }
+
+        /* Back to Home Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .back-btn:hover {
+            background: rgba(37, 99, 235, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: linear-gradient(to right, 
+                rgba(15, 23, 42, 0.9), 
+                rgba(37, 99, 235, 0.2), 
+                rgba(15, 23, 42, 0.9));
+            color: var(--light);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .copyright {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .legal-card {
+                padding: 2rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-card {
+                padding: 1.5rem;
+            }
+            
+            .legal-container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Animation for sections */
+        .legal-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .legal-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="neocloud.png" alt="NEO Cloud Technologies" class="logo-img">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="legal-container">
+        <a href="../index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+
+        <div class="legal-card">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: May 1, 2025</p>
+
+            <section class="legal-section" id="agreement">
+                <h2>1. Agreement to Terms</h2>
+                <p>These Terms of Service ("Terms") govern your access to and use of the NEO Cloud Technologies Student Portal ("Service"). By accessing or using the Service, you agree to be bound by these Terms.</p>
+                <p>If you do not agree to these Terms, you may not access or use the Service. We may modify these Terms at any time, and such modifications shall be effective immediately upon posting.</p>
+            </section>
+
+            <section class="legal-section" id="accounts">
+                <h2>2. User Accounts</h2>
+                <p>To access certain features of the Service, you must register for an account:</p>
+                <ul>
+                    <li>You must provide accurate and complete information</li>
+                    <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+                    <li>You are responsible for all activities that occur under your account</li>
+                    <li>We reserve the right to suspend or terminate accounts that violate these Terms</li>
+                </ul>
+            </section>
+
+            <section class="legal-section" id="use-service">
+                <h2>3. Permitted Use</h2>
+                <p>The Service is intended for legitimate educational purposes only. You agree to use the Service only for:</p>
+                <ul>
+                    <li>Student attendance tracking</li>
+                    <li>Course registration and management</li>
+                    <li>Educational feedback and communication</li>
+                </ul>
+                
+                <h3>Prohibited Activities</h3>
+                <p>You may not:</p>
+                <ul>
+                    <li>Use the Service for any illegal purpose</li>
+                    <li>Attempt to gain unauthorized access to the Service</li>
+                    <li>Interfere with or disrupt the Service</li>
+                    <li>Submit false or misleading information</li>
+                    <li>Use automated systems to access the Service</li>
+                </ul>
+            </section>
+
+            <section class="legal-section" id="content">
+                <h2>4. User Content</h2>
+                <p>You retain ownership of any content you submit through the Service ("User Content"). By submitting User Content, you grant us a worldwide, non-exclusive license to use, reproduce, and display such content for the purpose of providing the Service.</p>
+                <p>You are solely responsible for your User Content and affirm that you have all necessary rights to submit it.</p>
+            </section>
+
+            <section class="legal-section" id="payments">
+                <h2>5. Payments and Refunds</h2>
+                <p>Certain features of the Service may require payment:</p>
+                <ul>
+                    <li>All fees are stated in local currency and are non-refundable except as required by law</li>
+                    <li>You authorize us to charge your payment method for all applicable fees</li>
+                    <li>We may change our fees at any time with prior notice</li>
+                </ul>
+            </section>
+
+            <section class="legal-section" id="termination">
+                <h2>6. Termination</h2>
+                <p>We may terminate or suspend your access to the Service immediately, without prior notice, for any reason, including without limitation if you breach these Terms.</p>
+                <p>Upon termination, your right to use the Service will immediately cease. All provisions of these Terms that should survive termination shall survive.</p>
+            </section>
+
+            <section class="legal-section" id="disclaimer">
+                <h2>7. Disclaimer of Warranties</h2>
+                <p>THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. WE DISCLAIM ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+                <p>We do not warrant that the Service will be uninterrupted, secure, or error-free.</p>
+            </section>
+
+            <section class="legal-section" id="limitation">
+                <h2>8. Limitation of Liability</h2>
+                <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES RESULTING FROM YOUR USE OF THE SERVICE.</p>
+                <p>OUR TOTAL LIABILITY FOR ANY CLAIMS RELATED TO THE SERVICE SHALL NOT EXCEED THE AMOUNT YOU PAID TO US IN THE PAST 12 MONTHS.</p>
+            </section>
+
+            <section class="legal-section" id="governing">
+                <h2>9. Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions.</p>
+                <p>Any disputes shall be resolved in the state or federal courts located in San Francisco County, California.</p>
+            </section>
+
+            <section class="legal-section" id="contact">
+                <h2>10. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us:</p>
+                <ul>
+                    <li>By email: <a href="mailto:legal@neocloudtech.com">legal@neocloudtech.com</a></li>
+                    <li>By mail: NEO Cloud Technologies, 123 Cloud Avenue, Tech City, TC 10001</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:Henryleo480@gmail.com">Contact</a>
+        </div>
+        <p class="copyright">
+            &copy; 2025 NEO Cloud Technologies<br>
+            All rights reserved
+        </p>
+    </footer>
+
+    <script>
+        // Same JavaScript as privacy.html for animations
+        const sections = document.querySelectorAll('.legal-section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
